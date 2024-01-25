@@ -1,0 +1,55 @@
+rk3326_mid:/ # df
+Filesystem                     1K-blocks   Used Available Use% Mounted on
+rootfs                            479544   3040    476504   1% /
+tmpfs                             488840    484    488356   1% /dev
+/dev/block/mmcblk0p11            1491184 994508    496676  67% /system
+/dev/block/mmcblk0p13             358520 180852    177668  51% /vendor
+tmpfs                             488840      0    488840   0% /mnt
+/dev/block/mmcblk0p14             628672   1144    627528   1% /oem
+/dev/block/mmcblk0p10             364504    672    363832   1% /cache
+/dev/block/mmcblk0p12              11760     64     11696   1% /metadata
+/dev/block/mmcblk0p16             499656    784    498872   1% /private
+/dev/block/dm-0                  3782636 576008   3206628  16% /data
+/data/media                      3782636 576008   3206628  16% /mnt/runtime/default/emulated
+/dev/block/vold/public:179,129  60764160    512  60763648   1% /mnt/media_rw/E5BA-F1EC
+/mnt/media_rw/E5BA-F1EC         60764160    512  60763648   1% /mnt/runtime/default/E5BA-F1EC
+
+
+rk3326_mid:/ # mount
+rootfs on / type rootfs (ro,seclabel,size=479544k,nr_inodes=119886)
+tmpfs on /dev type tmpfs (rw,seclabel,nosuid,relatime,size=488840k,nr_inodes=122210,mode=755)
+devpts on /dev/pts type devpts (rw,seclabel,relatime,mode=600)
+proc on /proc type proc (rw,relatime,gid=3009,hidepid=2)
+sysfs on /sys type sysfs (rw,seclabel,relatime)
+selinuxfs on /sys/fs/selinux type selinuxfs (rw,relatime)
+/dev/block/mmcblk0p11 on /system type ext4 (ro,seclabel,relatime,data=ordered,inode_readahead_blks=8)
+/dev/block/mmcblk0p13 on /vendor type ext4 (ro,seclabel,relatime,data=ordered,inode_readahead_blks=8)
+none on /acct type cgroup (rw,relatime,cpuacct)
+none on /dev/memcg type cgroup (rw,relatime,memory)
+/sys/kernel/debug on /sys/kernel/debug type debugfs (rw,seclabel,relatime,mode=755)
+/sys/kernel/debug/tracing on /sys/kernel/debug/tracing type tracefs (rw,seclabel,relatime,mode=755)
+none on /dev/stune type cgroup (rw,relatime,schedtune)
+tmpfs on /mnt type tmpfs (rw,seclabel,relatime,size=488840k,nr_inodes=122210,mode=755,gid=1000)
+none on /config type configfs (rw,relatime)
+none on /dev/cpuctl type cgroup (rw,relatime,cpu)
+none on /dev/cpuset type cgroup (rw,relatime,cpuset,noprefix,release_agent=/sbin/cpuset_release_agent)
+pstore on /sys/fs/pstore type pstore (rw,seclabel,relatime)
+/dev/block/mmcblk0p14 on /oem type ext4 (ro,seclabel,noatime,nodiratime,noauto_da_alloc,data=ordered)
+/dev/block/mmcblk0p10 on /cache type ext4 (rw,seclabel,nosuid,nodev,noatime,nodiratime,discard,noauto_da_alloc,data=ordered)
+/dev/block/mmcblk0p12 on /metadata type ext4 (rw,seclabel,nosuid,nodev,noatime,nodiratime,discard,noauto_da_alloc,data=ordered)
+/dev/block/mmcblk0p16 on /private type ext4 (rw,seclabel,nosuid,nodev,noatime,nodiratime,discard,noauto_da_alloc,data=ordered)
+tmpfs on /storage type tmpfs (rw,seclabel,relatime,size=488840k,nr_inodes=122210,mode=755,gid=1000)
+adb on /dev/usb-ffs/adb type functionfs (rw,relatime)
+/dev/block/dm-0 on /data type f2fs (rw,lazytime,seclabel,nosuid,nodev,noatime,nodiratime,background_gc=on,discard,no_heap,user_xattr,inline_xattr,inline_data,inline_dentry,flush_merge,extent_cache,mode=adaptive,active_logs=6,reserve_root=32768,resuid=0,resgid=1000,alloc_mode=reuse,fsync_mode=posix)
+/data/media on /mnt/runtime/default/emulated type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid)
+/data/media on /storage/emulated type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid)
+/data/media on /mnt/runtime/read/emulated type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=9997,multiuser,mask=23,derive_gid)
+/data/media on /mnt/runtime/write/emulated type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=9997,multiuser,mask=7,derive_gid)
+/dev/block/vold/public:179,129 on /mnt/media_rw/E5BA-F1EC type exfat (rw,dirsync,nosuid,nodev,noexec,relatime,uid=1023,gid=1023,fmask=0007,dmask=0007,allow_utime=0020,iocharset=utf8,namecase=0,errors=remount-ro)
+/mnt/media_rw/E5BA-F1EC on /mnt/runtime/default/E5BA-F1EC type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,mask=6)
+/mnt/media_rw/E5BA-F1EC on /storage/E5BA-F1EC type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,mask=6)
+/mnt/media_rw/E5BA-F1EC on /mnt/runtime/read/E5BA-F1EC type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=9997,mask=23)
+/mnt/media_rw/E5BA-F1EC on /mnt/runtime/write/E5BA-F1EC type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=9997,mask=7)
+
+
+

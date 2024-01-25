@@ -1,0 +1,17 @@
+:~$ rkdeveloptool rfi
+Flash Info:
+	Manufacturer: SAMSUNG, value=00
+	Flash Size: 7456 MB
+	Flash Size: 15269888 Sectors
+	Block Size: 512 KB
+	Page Size: 2 KB
+	ECC Bits: 0
+	Access Time: 40
+	Flash CS: Flash<0> 
+
+:~$ rkdeveloptool rcb
+Capability:15 02 00 00 00 00 00 00 
+Direct LBA:	enabled
+First 4m Access:	enabled
+Read Com Log:	enabled
+Read Secure Mode:	enabled

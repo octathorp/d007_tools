@@ -1,0 +1,2 @@
+rk3326_mid:/ # cat /proc/cmdline                                                                                                 
+storagemedia=emmc androidboot.storagemedia=emmc androidboot.mode=normal  earlycon=uart8250,mmio32,0xff160000 swiotlb=1 androidboot.selinux=permissive console=ttyFIQ0 androidboot.baseband=N/A androidboot.veritymode=disabled androidboot.hardware=rk30board androidboot.console=ttyFIQ0 init=/init kpti=0
